@@ -26,7 +26,7 @@
         "<!(node -e \"require('nan')\")"
       ],
       'cflags_cc+': [
-        "-Wno-deprecated-declarations"
+        "-Wno-deprecated-declarations", "-std=c++17"
       ],
       'conditions': [
         # common exclusions
@@ -58,7 +58,7 @@
         }],
         ['OS=="mac"', {
           'cflags':[
-            "-stdlib=libc++"
+            "-std=c++17", "-stdlib=libc++"
           ],
           'xcode_settings': {
             "OTHER_CPLUSPLUSFLAGS":["-std=c++17", "-stdlib=libc++"],
